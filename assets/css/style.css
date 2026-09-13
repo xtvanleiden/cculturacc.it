@@ -1,0 +1,403 @@
+/* cccc — centro di cultura contemporanea / conegliano
+   sito ricostruito per il dominio cculturacc.it */
+
+:root {
+  --orange: #ff3f00;
+  --green: #39a66a;
+  --blue: #2491fe;
+  --navy: #1a1d3f;
+  --ink: #191919;
+  --grey: #a2a2a2;
+  --white: #ffffff;
+  --radius: 20px;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--grey);
+  color: var(--white);
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+
+.site-header {
+  background: var(--orange);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 22px 30px 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 11px;
+  color: var(--white);
+  text-decoration: none;
+  text-align: right;
+  padding-top: 10px;
+  max-width: 260px;
+}
+
+.tagline:hover {
+  opacity: 0.8;
+}
+
+/* colored blocks (dove / cosa / servizi) */
+
+.block {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.block-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.block-body {
+  padding: 40px 30px 34px;
+  position: relative;
+}
+
+.block--green .block-body {
+  background: var(--green);
+}
+
+.block--blue .block-body {
+  background: var(--blue);
+}
+
+.block--navy .block-body {
+  background: var(--navy);
+}
+
+.block-label {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  color: var(--white);
+  position: absolute;
+  left: 30px;
+  top: 44px;
+}
+
+.block-detail {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--white);
+  position: absolute;
+  right: 30px;
+  top: 44px;
+  text-align: right;
+  max-width: 260px;
+}
+
+.block-detail a {
+  text-decoration: underline;
+}
+
+.block-heading {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(20px, 3.4vw, 30px);
+  line-height: 1.25;
+  color: var(--white);
+  margin: 0;
+  max-width: 760px;
+}
+
+.block-heading .sep {
+  font-size: 0.7em;
+  opacity: 0.7;
+  padding: 0 2px;
+}
+
+/* about page big panel */
+
+.about-panel {
+  background: var(--orange);
+  border-radius: var(--radius);
+  padding: 60px 30px;
+  margin: 6px 0;
+}
+
+.about-panel p {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.4vw, 30px);
+  line-height: 1.4;
+  color: var(--white);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* contatti page */
+
+.contact-panel {
+  background: var(--green);
+  border-radius: var(--radius);
+  padding: 50px 30px;
+  margin: 6px 0;
+  color: var(--white);
+}
+
+.contact-panel h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 24px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-grid h2 {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: none;
+  margin: 0 0 8px;
+  opacity: 0.85;
+}
+
+.contact-grid a {
+  text-decoration: underline;
+}
+
+.map-embed {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 6px 0;
+  line-height: 0;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
+  display: block;
+}
+
+/* instagram eventi feed */
+
+.ig-panel {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 46px 30px 50px;
+  margin: 6px 0;
+  color: var(--white);
+}
+
+.ig-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.ig-panel h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3.2vw, 34px);
+  margin: 0;
+}
+
+.ig-panel-head a {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: underline;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.ig-post {
+  display: block;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ig-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.ig-post:hover img {
+  transform: scale(1.04);
+}
+
+.ig-post-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 8px 10px;
+  font-size: 11px;
+  line-height: 1.3;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ig-post:hover .ig-post-caption {
+  opacity: 1;
+}
+
+.ig-status {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.ig-status a {
+  text-decoration: underline;
+}
+
+/* footer */
+
+.site-footer {
+  background: var(--orange);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 30px;
+  margin-top: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  background: var(--white);
+  color: var(--orange);
+  width: 86px;
+  height: 86px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.footer-text {
+  padding-top: 12px;
+  flex: 1 1 260px;
+}
+
+.footer-links {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links .sep {
+  opacity: 0.6;
+  padding: 0 6px;
+}
+
+.footer-address {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 11px;
+  color: var(--white);
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+  }
+
+  .tagline {
+    text-align: left;
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .block-body {
+    padding-top: 78px;
+  }
+
+  .block-label,
+  .block-detail {
+    position: static;
+    display: block;
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .block-detail {
+    margin-top: 14px;
+  }
+}

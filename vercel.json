@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contatti", "destination": "/contatti.html" }
+  ]
+}
