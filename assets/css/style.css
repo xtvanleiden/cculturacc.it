@@ -58,6 +58,13 @@ a {
   gap: 20px;
 }
 
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
 .logo {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-weight: 700;
@@ -66,6 +73,23 @@ a {
   color: var(--white);
   text-decoration: none;
   letter-spacing: -0.5px;
+}
+
+.info-btn {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 11px;
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  padding: 3px 12px;
+  margin-left: 2px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.info-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--white);
 }
 
 .tagline {
