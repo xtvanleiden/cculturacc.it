@@ -109,7 +109,7 @@ a {
 .block {
   border-radius: var(--radius);
   overflow: hidden;
-  margin: 6px 0;
+  margin: 2px 0;
 }
 
 .block-photo {
@@ -183,10 +183,10 @@ a {
 /* about page big panel */
 
 .about-panel {
-  background: var(--orange);
+  background: var(--green);
   border-radius: var(--radius);
   padding: 60px 30px;
-  margin: 6px 0;
+  margin: 2px 0;
 }
 
 .about-panel p {
@@ -206,7 +206,7 @@ a {
 .map-section {
   background: var(--white);
   padding: 40px 30px;
-  margin: 6px 0;
+  margin: 2px 0;
 }
 
 .about-map {
@@ -222,7 +222,7 @@ a {
   background: var(--green);
   border-radius: var(--radius);
   padding: 50px 30px;
-  margin: 6px 0;
+  margin: 2px 0;
   color: var(--white);
 }
 
@@ -258,7 +258,7 @@ a {
 .map-embed {
   border-radius: var(--radius);
   overflow: hidden;
-  margin: 6px 0;
+  margin: 2px 0;
   line-height: 0;
 }
 
@@ -272,10 +272,10 @@ a {
 /* instagram eventi feed */
 
 .ig-panel {
-  background: var(--navy);
+  background: var(--green);
   border-radius: var(--radius);
   padding: 46px 30px 50px;
-  margin: 6px 0;
+  margin: 2px 0;
   color: var(--white);
 }
 
@@ -362,7 +362,7 @@ a {
   border-radius: var(--radius) var(--radius) 0 0;
   padding: 30px;
   min-height: 86px;
-  margin-top: 6px;
+  margin-top: 2px;
   display: flex;
   align-items: center;
   gap: 22px;
