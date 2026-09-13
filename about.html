@@ -9,16 +9,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header class="site-header wrap">
-  <div class="brand">
-    <a class="logo" href="/">cccc</a>
+  <a class="logo" href="/">cccc</a>
+  <div class="nav-right">
+    <a class="tagline" href="/about">centro di cultura contemporanea / conegliano</a>
     <a class="info-btn" href="/about">info</a>
   </div>
-  <a class="tagline" href="/about">centro di cultura contemporanea / conegliano</a>
 </header>
 
 <main class="wrap">
@@ -26,6 +27,10 @@
     <p>Il CCCC – Centro di Cultura Contemporanea Conegliano è un'associazione nata nel 2017 a Conegliano, con sede in via Caronelli 15. In estate animerà anche uno spazio all'aperto nel Brolo di San Francesco, dedicato a eventi ed esperienze naturalistiche.</p>
     <p>Il CCCC esplora il territorio attraverso proiezioni, incontri e concerti, con una programmazione culturale di qualità.</p>
     <p>Crede che si possano realizzare buoni progetti culturali anche fuori dai grandi centri, nella provincia, anche alle pendici delle colline del Prosecco, lavora perché il territorio del Cenedese possa raccontare la propria cultura con la stessa cura e profondità riservata solitamente alle città, invece di limitarsi a ricevere proposte elaborate altrove.</p>
+  </section>
+
+  <section class="map-section">
+    <div id="about-map" class="about-map" role="img" aria-label="Mappa: via Caronelli 15, Conegliano (TV)"></div>
   </section>
 </main>
 
@@ -38,5 +43,16 @@
     <div class="footer-address">cccc – centro di cultura contemporanea / conegliano, via Caronelli 15, Conegliano (TV)</div>
   </div>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  var ccccMap = L.map("about-map", { scrollWheelZoom: false }).setView([45.8859819, 12.2939248], 17);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
+  }).addTo(ccccMap);
+  L.marker([45.8859819, 12.2939248]).addTo(ccccMap)
+    .bindPopup("cccc – via Caronelli 15, Conegliano (TV)");
+</script>
 </body>
 </html>
