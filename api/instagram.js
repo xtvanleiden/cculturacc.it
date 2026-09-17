@@ -9,7 +9,7 @@
 // See README.md for how to obtain both.
 
 const GRAPH_VERSION = "v21.0";
-const FIELDS = "id,caption,media_type,media_url,thumbnail_url,permalink,timestamp";
+const FIELDS = "id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,children{media_url,media_type,thumbnail_url}";
 const LIMIT = 12;
 
 module.exports = async function handler(req, res) {
