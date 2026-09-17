@@ -21,7 +21,7 @@ module.exports = async function handler(req, res) {
   }
 
   const url =
-    `https://graph.facebook.com/${GRAPH_VERSION}/${IG_USER_ID}/media` +
+    `https://graph.instagram.com/${GRAPH_VERSION}/${IG_USER_ID}/media` +
     `?fields=${FIELDS}&limit=${LIMIT}&access_token=${IG_ACCESS_TOKEN}`;
 
   try {
