@@ -109,7 +109,7 @@ a {
 .block {
   border-radius: var(--radius);
   overflow: hidden;
-  margin: 2px 0;
+  margin: 0;
 }
 
 .block-photo {
