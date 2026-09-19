@@ -11,14 +11,15 @@ stessa associazione.
 ## Struttura
 
 ```
-index.html            home
+index.html            home (feed eventi: 5 post + carosello)
 about.html            chi siamo
 contatti.html         contatti + mappa + feed eventi
+eventi.html           griglia completa di tutti i post Instagram
 assets/css/style.css  stile
-assets/js/instagram-feed.js   fetch lato client del feed eventi
+assets/js/instagram-feed.js   fetch lato client del feed eventi + modal
 assets/img/           foto e favicon
 api/instagram.js      funzione serverless (Vercel) che chiama la Graph API
-vercel.json           URL puliti (/about, /contatti) + config
+vercel.json           URL puliti (/about, /contatti, /eventi) + config
 ```
 
 ## 1. Deploy su Vercel + dominio cculturacc.it

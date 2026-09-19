@@ -10,7 +10,7 @@
 
 const GRAPH_VERSION = "v21.0";
 const FIELDS = "id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,children{media_url,media_type,thumbnail_url}";
-const LIMIT = 12;
+const LIMIT = 50;
 
 module.exports = async function handler(req, res) {
   const { IG_USER_ID, IG_ACCESS_TOKEN } = process.env;

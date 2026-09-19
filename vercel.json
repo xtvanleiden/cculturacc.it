@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
-    { "source": "/contatti", "destination": "/contatti.html" }
+    { "source": "/contatti", "destination": "/contatti.html" },
+    { "source": "/eventi", "destination": "/eventi.html" }
   ]
 }

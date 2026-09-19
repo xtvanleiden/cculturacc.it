@@ -65,6 +65,11 @@ a {
   gap: 8px;
 }
 
+.nav-btns {
+  display: flex;
+  gap: 8px;
+}
+
 .logo {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-weight: 700;
@@ -375,6 +380,11 @@ a {
   opacity: 1;
 }
 
+.ig-grid--full {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
 .ig-arrow {
   flex: 0 0 auto;
   width: 36px;
@@ -408,6 +418,10 @@ a {
 
   .ig-post {
     flex-basis: calc((100% - 10px) / 1.6);
+  }
+
+  .ig-grid--full {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
 
   .ig-arrow {
