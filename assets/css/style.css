@@ -670,17 +670,24 @@ body.ig-modal-open {
 
 @media (max-width: 640px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 16px 18px;
+    min-height: 0;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 26px;
   }
 
   .nav-right {
-    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
   }
 
   .tagline {
-    text-align: left;
-    padding-top: 0;
     max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
